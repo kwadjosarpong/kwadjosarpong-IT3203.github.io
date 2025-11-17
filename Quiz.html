@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Project Quiz</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="welcome.html">Welcome</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="topic1.html">Topic 1</a></li>
+        <li><a href="topic2.html">Topic 2</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <h2>Test Your Knowledge!</h2>
+    <p>Answer the questions below to check your understanding of HTTP and SEO.</p>
+
+    <form id="quizForm">
+
+        <!-- Fill-in-the-blank -->
+        <h3>1. Fill in the blank</h3>
+        <p><strong>HTTP</strong> stands for:
+            <input type="text" id="q1" placeholder="Type your answer">
+        </p>
+
+        <!-- Multiple-choice questions -->
+        <h3>2. Multiple Choice</h3>
+
+        <p><strong>2A.</strong> Which version of HTTP introduced persistent connections?</p>
+        <label><input type="radio" name="q2" value="0.9"> HTTP/0.9</label><br>
+        <label><input type="radio" name="q2" value="1.0"> HTTP/1.0</label><br>
+        <label><input type="radio" name="q2" value="1.1"> HTTP/1.1</label><br>
+
+        <p><strong>2B.</strong> What does the &lt;title&gt; tag affect?</p>
+        <label><input type="radio" name="q3" value="layout"> Page layout</label><br>
+        <label><input type="radio" name="q3" value="ranking"> Search engine results</label><br>
+        <label><input type="radio" name="q3" value="color"> Text color</label><br>
+
+        <p><strong>2C.</strong> HTTP was created by:</p>
+        <label><input type="radio" name="q4" value="gates"> Bill Gates</label><br>
+        <label><input type="radio" name="q4" value="berners"> Tim Berners-Lee</label><br>
+        <label><input type="radio" name="q4" value="jobs"> Steve Jobs</label><br>
+
+        <!-- Multi-select -->
+        <h3>3. Multi-Select (Choose TWO)</h3>
+
+        <p>Which options are important for SEO?</p>
+        <label><input type="checkbox" name="q5" value="title"> Title Tags</label><br>
+        <label><input type="checkbox" name="q5" value="alt"> Alt Text</label><br>
+        <label><input type="checkbox" name="q5" value="color"> Favorite Color</label><br>
+
+        <!-- Buttons -->
+        <br>
+        <button type="button" onclick="gradeQuiz()" style="padding:10px 20px;">Submit</button>
+        <button type="reset" style="padding:10px 20px; margin-left:10px;">Reset</button>
+
+    </form>
+
+    <div id="results" style="margin-top:30px;"></div>
+
+</main>
+
+<footer>
+    <p>
+        This is a class project for IT 3203. Visit the course site
+        <a href="https://ksuweb.github.io/IT3203/">here</a>.
+    </p>
+</footer>
+
+<script>
+    function gradeQuiz() {
+        let score = 0;
+        let total = 5;
+        let resultsHTML = "<h3>Quiz Results</h3>";
+
+        // 1. Fill in the blank
+        let q1 = document.getElementById("q1").value.trim().toLowerCase();
+        if (q1 === "hypertext transfer protocol") score++;
+
+        resultsHTML += `<p><strong>1.</strong> Your answer: ${q1 || "No answer"} —
+        ${q1 === "hypertext transfer protocol" ? "<span style='color:green'>Correct</span>" : "<span style='color:red'>Incorrect</span>"}
+        (Correct answer: Hypertext Transfer Protocol)</p>`;
+
+        // 2A
+        let q2 = document.querySelector("input[name='q2']:checked");
+        if (q2 && q2.value === "1.1") score++;
+
+        resultsHTML += `<p><strong>2A.</strong>
+        ${q2 ? q2.value : "No answer"} —
+        ${q2 && q2.value === "1.1" ? "<span style='color:green'>Correct</span>" : "<span style='color:red'>Incorrect</span>"}
+        (Correct: HTTP/1.1)</p>`;
+
+        // 2B
+        let q3 = document.querySelector("input[name='q3']:checked");
+        if (q3 && q3.value === "ranking") score++;
+
+        resultsHTML += `<p><strong>2B.</strong>
+        ${q3 ? q3.value : "No answer"} —
+        ${q3 && q3.value === "ranking" ? "<span style='color:green'>Correct</span>" : "<span style='color:red'>Incorrect</span>"}
+        (Correct: Search engine results)</p>`;
+
+        // 2C
+        let q4 = document.querySelector("input[name='q4']:checked");
+        if (q4 && q4.value === "berners") score++;
+
+        resultsHTML += `<p><strong>2C.</strong>
+        ${q4 ? q4.value : "No answer"} —
+        ${q4 && q4.value === "berners" ? "<span style='color:green'>Correct</span>" : "<span style='color:red'>Incorrect</span>"}
+        (Correct: Tim Berners-Lee)</p>`;
+
+        // 3. Multi-select (two correct: title + alt)
+        let q5 = document.querySelectorAll("input[name='q5']:checked");
+        let selected = [...q5].map(x => x.value);
+
+        if (selected.includes("title") && selected.includes("alt") && selected.length === 2) {
+            score++;
+        }
+
+        resultsHTML += `<p><strong>3.</strong> Your answers: ${selected.join(", ") || "No answer"} —
+        ${(selected.includes("title") && selected.includes("alt") && selected.length === 2)
+            ? "<span style='color:green'>Correct</span>"
+            : "<span style='color:red'>Incorrect</span>"}
+        (Correct: Title Tags, Alt Text)</p>`;
+
+        // Final Score
+        let passFail = score >= 3 ?
+            "<span style='color:green'>PASS</span>" : "<span style='color:red'>FAIL</span>";
+
+        resultsHTML += `<h3>Final Score: ${score} / ${total} — ${passFail}</h3>`;
+
+        document.getElementById("results").innerHTML = resultsHTML;
+    }
+</script>
+
+</body>
+</html>
