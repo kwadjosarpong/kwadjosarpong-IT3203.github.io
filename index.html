@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Home</h1></header>
-  
+
+<header><h1>Home</h1></header>
+
 <nav>
-  <ul>
-    <li><a href="welcome.html">Welcome</a></li>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="topic1.html">Topic 1</a></li>
-    <li><a href="topic2.html">Topic 2</a></li>
-    <li><a href="references.html">References</a></li>
-    <li><a href="concepts.html">Key Concepts</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
+    <ul>
+        <li><a href="welcome.html">Welcome</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="topic1.html">Topic 1</a></li>
+        <li><a href="topic2.html">Topic 2</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+    </ul>
 </nav>
 
-  <main>
-    <p>Welcome to my IT 3203 project website. This site explores web development topics.</p><ul><li>Topic 1</li><li>Topic 2</li><li>References</li><li>Key Concepts</li><li>About</li></ul>
-  </main>
-  
+
+<main>
+
+    <!-- Table of Contents Title -->
+    <h2 style="text-align:center; margin-bottom: 30px;">Table of Contents !</h2>
+
+    <!-- Two-column flexible layout -->
+    <div style="display:flex; justify-content:center; gap:80px;">
+
+        <!-- Left column: bullet points -->
+        <ul style="list-style-type:disc; font-size:18px;">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- Right column: clickable items -->
+        <ul style="list-style:none; font-size:18px; line-height:30px;">
+            <li><a href="index.html">home</a></li>
+            <li><a href="topic1.html">topic one</a></li>
+            <li><a href="topic2.html">topic two</a></li>
+            <li><a href="quiz.html">quiz</a></li>
+            <li><a href="references.html">references</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Research Description section -->
+    <div style="margin-top:40px; display:flex; align-items:flex-start; gap:20px;">
+        <p style="font-weight:bold; color:#8bbd3f; min-width:180px; text-align:right; font-size:18px;">
+            Research<br>Description:
+        </p>
+
+        <p style="font-size:17px; max-width:650px;">
+            This project explores the history of HTTP and the importance of SEO when building webpages in HTML. I aim to explain these concepts in a clear and straightforward way so that beginners can understand how they impact modern web development.
+        </p>
+    </div>
+
+</main>
+
 <footer>
-  <p>This is a class project for IT 3203. Visit the course site <a href="https://ksuweb.github.io/IT3203/">here</a>.</p>
+    <p>
+        This is a class project for IT 3203. Visit the course site
+        <a href="https://ksuweb.github.io/IT3203/">here</a>.
+    </p>
 </footer>
 
 </body>

@@ -8,45 +8,46 @@
 </head>
 <body>
 
-<!-- Header section -->
 <header>
     <h1>Topic 1: History of HTTP</h1>
 </header>
 
-<!-- Navigation menu -->
 <nav>
     <ul>
         <li><a href="welcome.html">Welcome</a></li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="topic1.html" class="active">Topic 1</a></li>
+        <li><a href="topic1.html">Topic 1</a></li>
         <li><a href="topic2.html">Topic 2</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
         <li><a href="references.html">References</a></li>
         <li><a href="concepts.html">Key Concepts</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
     </ul>
 </nav>
 
-<!-- Main content section -->
 <main>
-    <!-- Introduction paragraph -->
+
     <h2>Understanding the History of HTTP</h2>
     <p>
-        The HyperText Transfer Protocol (HTTP) is the foundation of data communication on the World Wide Web.
-        It was first introduced in 1989 by Tim Berners-Lee as part of the original web project at CERN.
-        Over the years, it has gone through multiple versions, each improving the way web data is transferred.
+        HTTP, also known as the Hypertext Transfer Protocol, is the core communication system used
+        on the web. It began as a simple way to transfer text but eventually grew into the powerful,
+        secure, and fast protocol that almost every website uses today.
     </p>
 
-    <!-- List of key HTTP versions -->
-    <h3>Key Versions of HTTP</h3>
+    <!-- Timeline diagram -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/HTTP_logo.svg/640px-HTTP_logo.svg.png"
+         alt="HTTP timeline"
+         style="max-width:200px; margin-bottom:20px;">
+
+    <h3>Major Versions of HTTP</h3>
     <ul>
-        <li><strong>HTTP/0.9</strong> – The first version, introduced in 1991, only supported plain text transfers.</li>
-        <li><strong>HTTP/1.0</strong> – Added support for headers, status codes, and more content types.</li>
-        <li><strong>HTTP/1.1</strong> – Introduced persistent connections and caching, becoming the most widely used version for years.</li>
-        <li><strong>HTTP/2</strong> – Brought multiplexing and header compression for faster performance.</li>
-        <li><strong>HTTP/3</strong> – Built on QUIC, offering better security and lower latency for modern web applications.</li>
+        <li><strong>HTTP/0.9</strong> – Introduced in 1991 as a very basic, text-only protocol.</li>
+        <li><strong>HTTP/1.0</strong> – Added headers, status codes, and better content delivery.</li>
+        <li><strong>HTTP/1.1</strong> – Became the most widely used version for years; added persistent connections and caching.</li>
+        <li><strong>HTTP/2</strong> – Improved speed through multiplexing and header compression.</li>
+        <li><strong>HTTP/3</strong> – The newest version built on QUIC, offering faster and more secure connections.</li>
     </ul>
 
-    <!-- Table comparing HTTP versions -->
     <h3>HTTP Version Comparison</h3>
     <table border="1" cellpadding="8">
         <tr>
@@ -57,39 +58,39 @@
         <tr>
             <td>HTTP/0.9</td>
             <td>1991</td>
-            <td>Simple text-based protocol, GET requests only</td>
+            <td>Simple text transfers, only GET requests</td>
         </tr>
         <tr>
             <td>HTTP/1.0</td>
             <td>1996</td>
-            <td>Added headers and media types</td>
+            <td>Headers, status codes, multimedia support</td>
         </tr>
         <tr>
             <td>HTTP/1.1</td>
             <td>1997</td>
-            <td>Persistent connections and caching</td>
+            <td>Persistent connections, better caching</td>
         </tr>
         <tr>
             <td>HTTP/2</td>
             <td>2015</td>
-            <td>Multiplexing and improved speed</td>
+            <td>Multiplexing, improved performance</td>
         </tr>
         <tr>
             <td>HTTP/3</td>
             <td>2022</td>
-            <td>Built on QUIC for faster, more secure connections</td>
+            <td>Built on QUIC, faster and more secure</td>
         </tr>
     </table>
 
-    <!-- Explanation of importance -->
-    <h3>Why Understanding HTTP Matters</h3>
+    <h3>Why This Matters</h3>
     <p>
-        Knowing how HTTP has evolved helps web developers understand how modern browsers and servers communicate.
-        This knowledge is essential for optimizing performance, improving security, and ensuring websites run efficiently.
+        Understanding how HTTP has changed over time helps developers understand how browsers,
+        servers, and websites communicate today. These improvements directly impact website speed,
+        security, and user experience.
     </p>
+
 </main>
 
-<!-- Footer section -->
 <footer>
     <p>
         This is a class project for IT 3203. Visit the course site
