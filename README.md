@@ -16,7 +16,7 @@ This project showcases a fully developed multi-page website highlighting two maj
 - Implement a working knowledge quiz to reinforce learning  
 - Follow clean, organized coding practices with semantic formatting  
 
----
+
 
 ## Tools & Techniques
 
@@ -26,7 +26,7 @@ This project showcases a fully developed multi-page website highlighting two maj
 - **Image & Media Integration** for diagrams and illustrations in each topic  
 - **Version Control** using Git and GitHub for managing and publishing project files  
 
----
+
 
 ## My Contributions
 
@@ -39,7 +39,7 @@ This project showcases a fully developed multi-page website highlighting two maj
 - Added a polished **About Me** page with a professional headshot  
 - Ensured all pages, links, and navigation were consistent and fully functional  
 
----
+
 
 ## Key Features
 
@@ -51,7 +51,7 @@ This project showcases a fully developed multi-page website highlighting two maj
 - **Organized file structure** for easy scalability and maintenance  
 - **Lightweight static website** that loads fast and performs smoothly  
 
----
+
 
 ## Limitations
 
@@ -62,7 +62,7 @@ This version focuses primarily on front-end design. Future improvements could in
 - More dynamic SEO metadata or structured data implementation  
 - Further mobile optimization for small-screen devices  
 
----
+
 
 ## Lessons Learned
 
@@ -74,6 +74,6 @@ This project strengthened my understanding of how **HTML, CSS, and JavaScript** 
 - Using JavaScript to add interactivity and dynamic behavior  
 - Designing with user experience and clarity in mind  
 
----
+
 
 
