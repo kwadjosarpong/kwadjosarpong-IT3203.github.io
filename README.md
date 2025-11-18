@@ -5,7 +5,7 @@ This project showcases a fully developed multi-page website highlighting two maj
 👉 **View Project (GitHub Pages Link Here)**  
 *(Once the repo is published, I can generate the direct link.)*
 
----
+
 
 ## Objectives
 
