@@ -2,8 +2,8 @@
 
 This project showcases a fully developed multi-page website highlighting two major web concepts: the **History of HTTP** and **Search Engine Optimization (SEO)**. The site demonstrates strong front-end fundamentals through clean layout structure, organized styling, navigation consistency, and a functional quiz powered by JavaScript.
 
-👉 **View Project (GitHub Pages Link Here)**  
-*(Once the repo is published, I can generate the direct link.)*
+👉 **View Project:**  
+https://kwadjosarpong.github.io/kwadjosarpong-IT3203.github.io/
 
 
 
